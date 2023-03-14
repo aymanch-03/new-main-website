@@ -1,0 +1,10 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.preferredLightColorTheme": "Kimbie Dark",
+  "workbench.colorTheme": "Material Theme Darker"
+}
