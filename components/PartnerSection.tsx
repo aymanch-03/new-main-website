@@ -217,28 +217,30 @@ const PartnerSection = () => {
           modules={[Navigation, Pagination]}
           className="mySwiper mx-auto h-max relative w-3/4 md:overflow-hidden overflow-visible !py-[60px] md:!px-[15px] !px-8"
         >
-          {shuffledPartnerCats.map(({ imageSrc, title }, index) => {
-            return (
-              <>
-                <SwiperSlide
-                  className="rounded-xl overflow-hidden shadow-lg border border-black h-max w-max"
-                  key={index}
-                >
-                  <Image
-                    width={600}
-                    height={600}
-                    src={imageSrc}
-                    alt={title}
-                    quality={100}
-                    className="object-cover h-max w-max"
-                  />{" "}
-                  <div className="bg-bg text-black font-secondary md:text-2xl text-xl border-t-2 border-t-black px-3 py-2 overflow-visible">
-                    {title}
-                  </div>
-                </SwiperSlide>
-              </>
-            );
-          })}
+          {shuffledPartnerCats.map(
+            ({ imageSrc, title }: any, index: React.Key | null | undefined) => {
+              return (
+                <>
+                  <SwiperSlide
+                    className="rounded-xl overflow-hidden shadow-lg border border-black h-max w-max"
+                    key={index}
+                  >
+                    <Image
+                      width={600}
+                      height={600}
+                      src={imageSrc}
+                      alt={title}
+                      quality={100}
+                      className="object-cover h-max w-max"
+                    />{" "}
+                    <div className="bg-bg text-black font-secondary md:text-2xl text-xl border-t-2 border-t-black px-3 py-2 overflow-visible">
+                      {title}
+                    </div>
+                  </SwiperSlide>
+                </>
+              );
+            }
+          )}
           <div
             ref={navigationPrevRef}
             className=" w-max p-2 bg-bg  border-black border rounded-full absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 cursor-pointer hover:bg-bg/50 transition-all duration-900 ml-6"

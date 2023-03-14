@@ -29,7 +29,7 @@ const Apps = () => {
       title: "Staking",
     },
   ];
-  const Card1 = ({ imageSrc, title }) => (
+  const Card1 = ({ imageSrc, title }: any) => (
     <div className="overflow-hidden shadow-xl cursor-pointer rounded-2xl w-full md:w-[300px] h-[300px] border-2 border-black bg-no-repeat bg-cover bg-center relative group z-50">
       <Image
         src={imageSrc}
@@ -43,7 +43,7 @@ const Apps = () => {
       </h2>
     </div>
   );
-  const Card2 = ({ imageSrc, title }) => (
+  const Card2 = ({ imageSrc, title }: any) => (
     <div className="overflow-hidden shadow-xl cursor-pointer rounded-2xl w-full md:w-[300px] h-[300px] border-2 border-black bg-no-repeat bg-cover bg-center relative group z-50">
       <Image
         src={imageSrc}
@@ -73,13 +73,13 @@ const Apps = () => {
               Buy & join us
             </button>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 h-full gap-3 xl:place-items-start place-items-center lg:px-0 px-7">
-              {appSquares2.map(({ imageSrc, title }, index) => (
+              {appSquares2.map(({ imageSrc, title }: any, index) => (
                 <Card2 key={index} imageSrc={imageSrc} title={title} />
               ))}
             </div>
           </div>
           <div className="md:grid-cols-2 grid grid-cols-1 mx-auto items-center justify-between gap-3 w-full h-full xl:place-items-end place-items-center	lg:px-0 px-7">
-            {appSquares1.map(({ imageSrc, title }, index) => (
+            {appSquares1.map(({ imageSrc, title }: any, index) => (
               <Card1 key={index} imageSrc={imageSrc} title={title} />
             ))}
           </div>
