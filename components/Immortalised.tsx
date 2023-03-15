@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Navigation, Pagination } from "swiper";
+import dynamic from "next/dynamic";
 const Immortalised = () => {
   const blackNft = [
     "/Website Images/Page 6 - Immortalised/1.png",
@@ -127,4 +128,4 @@ const Immortalised = () => {
   );
 };
 
-export default Immortalised;
+export default dynamic(() => Promise.resolve(Immortalised), { ssr: false });

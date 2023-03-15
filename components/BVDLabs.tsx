@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import React from "react";
 
@@ -53,4 +54,4 @@ const BVDLabs = () => {
   );
 };
 
-export default BVDLabs;
+export default dynamic(() => Promise.resolve(BVDLabs), { ssr: false });

@@ -7,6 +7,7 @@ import catB from "../public/Website Images/Page 5 - Links/cat_B.png";
 import catC from "../public/Website Images/Page 5 - Links/cat_C.png";
 import catLogo from "../public/Website Images/Page 5 - Links/catLOGO.png";
 import fff from "../public/Website Images/Page 5 - Links/fff.svg";
+import dynamic from "next/dynamic";
 
 const Links = () => {
   return (
@@ -116,4 +117,4 @@ const Links = () => {
   );
 };
 
-export default Links;
+export default dynamic(() => Promise.resolve(Links), { ssr: false });

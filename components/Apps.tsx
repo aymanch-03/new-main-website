@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import dynamic from "next/dynamic";
 import Image from "next/image";
 const Apps = () => {
   const appSquares1 = [
@@ -65,14 +66,14 @@ const Apps = () => {
       <main className="container px-3 py-20 mx-auto relative z-10">
         <section className="grid xl:grid-cols-2 grid-cols-1 w-full h-full items-center justify-between mx-auto place-items-center gap-3">
           <div className="space-y-8 w-full">
-            <h1 className="font-primary lg:text-7xl md:text-6xl md:leading-[4.5rem] text-5xl text-black lg:leading-[6rem] leading-[3rem] xl:text-left text-center">
+            <h1 className="font-primary lg:text-7xl md:text-6xl md:leading-[4.5rem]  xl:ml-[70px] text-5xl text-black lg:leading-[6rem] leading-[3rem] xl:text-left text-center">
               Once you go BVD, <br />
               You never go back.
             </h1>
-            <button className="flex xl:mx-0 justify-center mx-auto text-center font-primary text-primary border-2 border-primary rounded-full bg-bg px-9 py-3 text-xl hover:bg-primary hover:text-bg transition-all duration-600">
+            <button className="flex xl:mx-0 justify-center mx-auto text-center font-primary xl:ml-[70px] text-primary border-2 border-primary rounded-full bg-bg px-9 py-3 text-xl hover:bg-primary hover:text-bg transition-all duration-600">
               Buy & join us
             </button>
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 h-full gap-3 xl:place-items-start place-items-center lg:px-0 px-7">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 h-full gap-3 xl:place-items-end place-items-center lg:px-0 px-7">
               {appSquares2.map(({ imageSrc, title }: any, index) => (
                 <Card2 key={index} imageSrc={imageSrc} title={title} />
               ))}
@@ -90,4 +91,4 @@ const Apps = () => {
   );
 };
 
-export default Apps;
+export default dynamic(() => Promise.resolve(Apps), { ssr: false });

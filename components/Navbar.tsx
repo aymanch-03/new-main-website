@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bvdLogo from "../public/Website Images/Page 1 - Landing/bvdLogo.png";
 import { IoIosMenu } from "react-icons/io";
+import dynamic from "next/dynamic";
 const Navbar = () => {
   return (
     <div>
@@ -23,4 +24,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });

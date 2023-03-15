@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import dynamic from "next/dynamic";
 /* eslint-disable react/no-unescaped-entities */
 const About = () => {
   return (
@@ -60,4 +60,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default dynamic(() => Promise.resolve(About), { ssr: false });

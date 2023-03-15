@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+
 /* eslint-disable react/no-unescaped-entities */
 const Partnerships = () => {
   return (
@@ -14,4 +16,4 @@ const Partnerships = () => {
   );
 };
 
-export default Partnerships;
+export default dynamic(() => Promise.resolve(Partnerships), { ssr: false });

@@ -1,4 +1,5 @@
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
 const Landing = () => {
   return (
     <div className="relative lg:h-[82vh] md:h-[72vh] h-[62vh] lg:my-32 md:my-24 my-14">
@@ -9,4 +10,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default dynamic(() => Promise.resolve(Landing), { ssr: false });

@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Navigation, Pagination } from "swiper";
+import dynamic from "next/dynamic";
 const PartnerSection = () => {
   const partnerCats = [
     {
@@ -265,4 +266,4 @@ const PartnerSection = () => {
   );
 };
 
-export default PartnerSection;
+export default dynamic(() => Promise.resolve(PartnerSection), { ssr: false });

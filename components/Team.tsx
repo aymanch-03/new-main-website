@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { BsTwitter } from "react-icons/bs";
@@ -182,4 +183,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default dynamic(() => Promise.resolve(Team), { ssr: false });

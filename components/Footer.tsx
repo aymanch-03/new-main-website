@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
@@ -101,4 +102,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default dynamic(() => Promise.resolve(Footer), { ssr: false });
